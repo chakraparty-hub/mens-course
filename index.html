@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Filter — Stop Attracting the Wrong Woman | Coaching for Successful Men</title>
+<meta name="description" content="The 8-week coaching system for successful men to stop attracting the wrong woman and build a relationship with the right one. Your problem was never attraction. It's filtration." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0e1a2b;
+    --navy-2:#14263e;
+    --navy-3:#1c3a5e;
+    --gold:#c9a227;
+    --gold-2:#e8c86a;
+    --cream:#f6f2ea;
+    --ink:#1c2733;
+    --muted:#5b6673;
+    --line:#e3dccf;
+    --white:#ffffff;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(14,26,43,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Cormorant Garamond',Georgia,serif}
+  .container{max-width:1120px;margin:0 auto;padding:0 24px}
+  img{max-width:100%}
+  a{color:inherit}
+
+  /* ---------- nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(14,26,43,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1120px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none}
+  .brand-mark{
+    width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--gold),#8a6d12);
+    color:var(--navy);font-weight:800;font-size:15px;
+  }
+  .brand-name{font-weight:700;letter-spacing:.08em;font-size:14px;text-transform:uppercase}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{color:#cdd6e2;text-decoration:none;font-size:13.5px;font-weight:500}
+  .nav-links a:hover{color:var(--gold-2)}
+  .nav-cta{
+    background:linear-gradient(135deg,var(--gold),#a38017);
+    color:var(--navy);font-weight:700;padding:9px 18px;border-radius:999px;
+    text-decoration:none;font-size:13.5px;
+  }
+  .nav-cta:hover{filter:brightness(1.08)}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(201,162,39,.16), transparent 60%),
+      radial-gradient(900px 500px at 10% 110%, rgba(28,58,94,.55), transparent 60%),
+      linear-gradient(180deg,#0b1524 0%,#101f35 100%);
+    color:var(--white);padding:110px 0 90px;position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(201,162,39,.55),transparent);
+  }
+  .hero .container{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid rgba(201,162,39,.45);color:var(--gold-2);
+    padding:7px 16px;border-radius:999px;font-size:12px;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px;
+  }
+  .hero h1{font-size:clamp(40px,5.2vw,64px);line-height:1.06;letter-spacing:-.01em;font-weight:800;margin-bottom:20px}
+  .hero h1 em{font-style:normal;color:var(--gold-2)}
+  .hero-sub{font-size:clamp(16px,1.6vw,19px);color:#c7d2e0;max-width:560px;margin-bottom:34px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .btn{
+    display:inline-block;padding:15px 30px;border-radius:999px;
+    font-weight:700;font-size:15.5px;text-decoration:none;transition:transform .15s ease,filter .15s ease;
+  }
+  .btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold) 55%,#a38017);color:var(--navy);box-shadow:0 8px 24px rgba(201,162,39,.35)}
+  .btn-gold:hover{transform:translateY(-2px);filter:brightness(1.06)}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:var(--white)}
+  .btn-ghost:hover{border-color:var(--gold-2);color:var(--gold-2)}
+  .hero-note{margin-top:16px;font-size:13px;color:#8fa0b5}
+  .hero-stats{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
+  .stat b{display:block;font-size:26px;color:var(--gold-2);font-weight:800;line-height:1.1}
+  .stat span{font-size:12.5px;color:#93a4ba;text-transform:uppercase;letter-spacing:.08em}
+
+  /* hero card */
+  .hero-card{
+    background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px;backdrop-filter:blur(4px);
+  }
+  .hero-card h3{color:var(--gold-2);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+  .hero-card ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .hero-card li{display:flex;gap:10px;align-items:flex-start;color:#dbe4ef;font-size:14.5px}
+  .hero-card li::before{content:"✓";color:var(--gold);font-weight:800;flex-shrink:0}
+  .hero-card .card-cta{margin-top:20px;display:block;text-align:center}
+
+  /* ---------- sections ---------- */
+  section{padding:92px 0}
+  .sec-head{max-width:700px;margin:0 auto 56px;text-align:center}
+  .sec-kicker{color:#a38017;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:12px;margin-bottom:12px}
+  .sec-head h2{font-size:clamp(30px,3.4vw,42px);line-height:1.12;font-weight:800;color:var(--navy);margin-bottom:14px}
+  .sec-head p{color:var(--muted);font-size:17px}
+
+  /* problem */
+  .problem{background:var(--cream)}
+  .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pain-card{
+    background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 24px;box-shadow:var(--shadow);
+  }
+  .pain-card .num{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;display:block;margin-bottom:10px}
+  .pain-card h4{color:var(--navy);font-size:16.5px;margin-bottom:8px}
+  .pain-card p{font-size:14px;color:var(--muted)}
+  .problem-reframe{
+    margin-top:44px;text-align:center;padding:34px 28px;border-radius:var(--radius);
+    background:linear-gradient(135deg,var(--navy),var(--navy-3));color:var(--white);
+  }
+  .problem-reframe .serif{font-size:clamp(24px,3vw,34px);font-weight:600;color:var(--gold-2);line-height:1.25}
+  .problem-reframe p{margin-top:10px;color:#c7d2e0;font-size:15.5px;max-width:640px;margin-left:auto;margin-right:auto}
+
+  /* outcomes */
+  .outcome-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .outcome-card{border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;background:var(--white);transition:transform .15s ease}
+  .outcome-card:hover{transform:translateY(-3px);border-color:var(--gold)}
+  .outcome-card .ico{font-size:26px;display:block;margin-bottom:12px}
+  .outcome-card h5{color:var(--navy);font-size:15px;margin-bottom:6px}
+  .outcome-card p{font-size:13.5px;color:var(--muted)}
+
+  /* modules */
+  .modules{background:var(--navy);color:var(--white)}
+  .modules .sec-head h2{color:var(--white)}
+  .modules .sec-head p{color:#9db0c8}
+  .mod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .mod-card{
+    display:flex;gap:18px;padding:22px;border-radius:var(--radius);
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:border-color .15s ease;
+  }
+  .mod-card:hover{border-color:rgba(201,162,39,.6)}
+  .mod-week{
+    flex-shrink:0;width:52px;height:52px;border-radius:12px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--gold-2),#a38017);color:var(--navy);
+    font-weight:800;font-size:15px;
+  }
+  .mod-card h5{color:var(--gold-2);font-size:15.5px;margin-bottom:5px}
+  .mod-card p{font-size:13.5px;color:#b7c5d8}
+
+  /* flags */
+  .flags-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .flag-card{
+    border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px;
+    background:var(--white);position:relative;overflow:hidden;
+  }
+  .flag-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#c0392b,#e67e22)}
+  .flag-card h5{color:var(--navy);font-size:15px;margin-bottom:6px}
+  .flag-card p{font-size:13px;color:var(--muted)}
+  .flag-note{margin-top:30px;text-align:center;font-size:15px;color:var(--muted)}
+  .flag-note b{color:var(--navy)}
+
+  /* format / for whom */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .split h2{font-size:clamp(28px,3vw,38px);font-weight:800;color:var(--navy);margin-bottom:18px;line-height:1.15}
+  .split p{color:var(--muted);margin-bottom:16px;font-size:15.5px}
+  .for-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .for-list li{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+  .for-list li::before{content:"✓";color:var(--gold);font-weight:800;flex-shrink:0;margin-top:2px}
+  .format-card{
+    background:linear-gradient(180deg,var(--navy),var(--navy-2));border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;color:var(--white);padding:32px;
+  }
+  .format-card h3{color:var(--gold-2);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+  .fmt{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .fmt:last-child{border-bottom:none}
+  .fmt b{font-size:16px}
+  .fmt span{color:#9db0c8;font-size:14px}
+
+  /* testimonials */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .testi{
+    background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px;box-shadow:var(--shadow);
+  }
+  .testi .quote{font-size:14.5px;color:var(--ink);font-style:italic;margin-bottom:16px}
+  .testi .who{font-weight:700;color:var(--navy);font-size:14px}
+  .testi .role{font-size:12.5px;color:var(--muted)}
+
+  /* pricing */
+  .pricing{background:var(--cream)}
+  .price-card{
+    max-width:560px;margin:0 auto;background:var(--white);border:1px solid var(--line);
+    border-radius:20px;padding:40px 38px;box-shadow:var(--shadow);text-align:center;
+  }
+  .price-tag{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+  .price-amt{font-size:52px;font-weight:800;color:var(--navy);line-height:1}
+  .price-amt small{font-size:18px;color:var(--muted);font-weight:500}
+  .price-list{list-style:none;text-align:left;margin:26px 0 30px;display:flex;flex-direction:column;gap:12px}
+  .price-list li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px}
+  .price-list li::before{content:"✓";color:var(--gold);font-weight:800;flex-shrink:0}
+  .guarantee{margin-top:26px;font-size:13px;color:var(--muted)}
+
+  /* faq */
+  .faq{max-width:760px;margin:0 auto}
+  details{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:var(--white);overflow:hidden}
+  summary{
+    padding:20px 22px;cursor:pointer;font-weight:600;font-size:15.5px;color:var(--navy);
+    list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:22px;color:var(--gold);font-weight:500;transition:transform .2s ease}
+  details[open] summary::after{transform:rotate(45deg)}
+  .faq-body{padding:0 22px 20px;font-size:14.5px;color:var(--muted)}
+
+  /* final cta */
+  .final-cta{
+    background:
+      radial-gradient(900px 500px at 15% 0%, rgba(201,162,39,.18), transparent 60%),
+      linear-gradient(180deg,#0b1524,#14263e);
+    color:var(--white);text-align:center;padding:100px 0;
+  }
+  .final-cta h2{font-size:clamp(32px,4vw,46px);font-weight:800;line-height:1.12;margin-bottom:16px}
+  .final-cta h2 em{font-style:normal;color:var(--gold-2)}
+  .final-cta p{color:#c7d2e0;max-width:560px;margin:0 auto 34px;font-size:16.5px}
+
+  /* footer */
+  footer{background:#0a1320;color:#7e90a8;padding:34px 0;text-align:center;font-size:13px}
+  footer .brand-name{color:var(--white);margin-bottom:8px}
+  footer a{color:var(--gold-2);text-decoration:none}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:960px){
+    .hero .container{grid-template-columns:1fr;gap:40px}
+    .pain-grid,.outcome-grid{grid-template-columns:repeat(2,1fr)}
+    .flags-grid{grid-template-columns:repeat(2,1fr)}
+    .testi-grid{grid-template-columns:1fr}
+    .mod-grid,.split{grid-template-columns:1fr}
+    .nav-links a:not(.nav-cta){display:none}
+  }
+  @media (max-width:560px){
+    section{padding:64px 0}
+    .pain-grid,.outcome-grid,.flags-grid{grid-template-columns:1fr}
+    .hero{padding:70px 0}
+    .hero-stats{gap:20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">F</span>
+      <span class="brand-name">The Filter</span>
+    </a>
+    <div class="nav-links">
+      <a href="#problem">The Problem</a>
+      <a href="#modules">The Program</a>
+      <a href="#flags">7 Red Flags</a>
+      <a href="#faq">FAQ</a>
+      <a href="#enroll" class="nav-cta">Apply Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="container">
+    <div>
+      <span class="kicker">1:1 Coaching · 8 Weeks · For Successful Men</span>
+      <h1>Your problem was never attraction.<br /><em>It's filtration.</em></h1>
+      <p class="hero-sub">
+        You attract women easily — that was never the issue. The Filter is the 8-week
+        coaching system that teaches successful men how to stop attracting the wrong woman
+        and build a relationship with the right one.
+      </p>
+      <div class="hero-ctas">
+        <a href="#enroll" class="btn btn-gold">Apply for Coaching →</a>
+        <a href="#modules" class="btn btn-ghost">See the 8 Modules</a>
+      </div>
+      <p class="hero-note">Limited spots each month · Apply and we'll schedule your free strategy call</p>
+      <div class="hero-stats">
+        <div class="stat"><b>90</b><span>days of vetting, not guessing</span></div>
+        <div class="stat"><b>5</b><span>non-negotiables, written</span></div>
+        <div class="stat"><b>7</b><span>red flags you'll catch early</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <h3>You'll walk away with</h3>
+        <ul>
+          <li>Your written Standard of Five — immune to chemistry and charm</li>
+          <li>The 90-day Vetting System that replaces feelings with evidence</li>
+          <li>The 7 warning patterns, spotted before they cost you a year</li>
+          <li>Boundaries that protect your time, energy, money, and peace</li>
+          <li>A Head-Heart-Gut framework so you never commit under pressure</li>
+          <li>Clear, calm confidence around choosing — and leaving early</li>
+        </ul>
+        <a href="#enroll" class="btn btn-gold card-cta">Start With a Free Strategy Call</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= PROBLEM ================= -->
+<section class="problem" id="problem">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-kicker">Sound familiar?</div>
+      <h2>You're successful everywhere — except here.</h2>
+      <p>If you've built a life, you've also built a target. The wrong woman is drawn to what you have, not who you are.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <span class="num">01</span>
+        <h4>You attract — but you don't filter</h4>
+        <p>You've never struggled for attention. You've struggled to choose. Every wrong woman you've dated was a filter failure, not bad luck.</p>
+      </div>
+      <div class="pain-card">
+        <span class="num">02</span>
+        <h4>Chemistry outranks evidence</h4>
+        <p>The wrong woman is often the most attractive one — she's practiced. You choose by feeling, and feelings can be manufactured.</p>
+      </div>
+      <div class="pain-card">
+        <span class="num">03</span>
+        <h4>Red flags appear late</h4>
+        <p>You discover the warning signs at month six instead of date two — after you've invested time, money, and peace.</p>
+      </div>
+      <div class="pain-card">
+        <span class="num">04</span>
+        <h4>Your value gets defined by her</h4>
+        <p>No written standard means every woman you meet sets the terms. She sets the pace, the rules, and what's acceptable.</p>
+      </div>
+      <div class="pain-card">
+        <span class="num">05</span>
+        <h4>You rationalize what you see</h4>
+        <p>“She's different with me.” Men aren't blindsided by women — they're blindsided by the red flags they refused to count.</p>
+      </div>
+      <div class="pain-card">
+        <span class="num">06</span>
+        <h4>You commit under pressure</h4>
+        <p>Loneliness, momentum, fear of starting over. Every decision made under pressure is made too fast — and paid for in years.</p>
+      </div>
+    </div>
+    <div class="problem-reframe">
+      <div class="serif">You don't need to attract more women.<br />You need to filter better.</div>
+      <p>That one sentence changes everything. The Filter gives you the system to do it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OUTCOMES ================= -->
+<section id="outcomes">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-kicker">The transformation</div>
+      <h2>Eight weeks from pattern to system</h2>
+      <p>This isn't dating advice. It's a decision-making system — built for men who run their lives on systems.</p>
+    </div>
+    <div class="outcome-grid">
+      <div class="outcome-card">
+        <span class="ico">🎯</span>
+        <h5>A written standard</h5>
+        <p>Five non-negotiables no chemistry, charm, or beautiful face can talk you out of.</p>
+      </div>
+      <div class="outcome-card">
+        <span class="ico">🔍</span>
+        <h5>Early red-flag detection</h5>
+        <p>Spot the 7 warning patterns by date two — not month six.</p>
+      </div>
+      <div class="outcome-card">
+        <span class="ico">📋</span>
+        <h5>Evidence-based choosing</h5>
+        <p>A 90-day vetting process that replaces feelings with evidence.</p>
+      </div>
+      <div class="outcome-card">
+        <span class="ico">🛡️</span>
+        <h5>Protected resources</h5>
+        <p>Boundaries with teeth for your time, energy, money, and peace.</p>
+      </div>
+      <div class="outcome-card">
+        <span class="ico">🧭</span>
+        <h5>A clear decision</h5>
+        <p>Head, heart, and gut aligned — so you commit with confidence, never pressure.</p>
+      </div>
+      <div class="outcome-card">
+        <span class="ico">🏔️</span>
+        <h5>Leadership at home</h5>
+        <p>Keep the right woman the right woman — structure, agreement, and mission first.</p>
+      </div>
+      <div class="outcome-card">
+        <span class="ico">⏳</span>
+        <h5>Years back</h5>
+        <p>End the wrong-woman cycle permanently. No more restarting at zero.</p>
+      </div>
+      <div class="outcome-card">
+        <span class="ico">🤝</span>
+        <h5>The right partnership</h5>
+        <p>A woman who lifts your life, protects your name, and builds with you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODULES ================= -->
+<section class="modules" id="modules">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-kicker">The program</div>
+      <h2>The 8 Modules — one per week</h2>
+      <p>Each week installs one layer of the system. By week eight, choosing the right woman is something you do — not something you hope for.</p>
+    </div>
+    <div class="mod-grid">
+      <div class="mod-card">
+        <div class="mod-week">W1</div>
+        <div>
+          <h5>The Magnet Problem</h5>
+          <p>Why your success attracts the wrong woman — and the reframe that ends the cycle.</p>
+        </div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-week">W2</div>
+        <div>
+          <h5>The Standard of Five</h5>
+          <p>Know your worth, write your five non-negotiables, and never let her set the terms.</p>
+        </div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-week">W3</div>
+        <div>
+          <h5>The 7 Warning Patterns</h5>
+          <p>Gold digger, controller, drama engine, fixer-upper, love bomber, status hunter, exit plan.</p>
+        </div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-week">W4</div>
+        <div>
+          <h5>The 90-Day Vetting System</h5>
+          <p>Three phases of evidence-based dating — so you choose by facts, not chemistry.</p>
+        </div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-week">W5</div>
+        <div>
+          <h5>The Partnership Matrix</h5>
+          <p>Score her — and yourself — on character, energy, alignment, contribution, loyalty.</p>
+        </div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-week">W6</div>
+        <div>
+          <h5>Boundaries & Protection</h5>
+          <p>Protect your time, energy, money, and peace with boundaries that have teeth.</p>
+        </div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-week">W7</div>
+        <div>
+          <h5>The Decision Framework</h5>
+          <p>Head, heart, and gut — and the rule that you never commit under pressure.</p>
+        </div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-week">W8</div>
+        <div>
+          <h5>Building It Right</h5>
+          <p>Communication structure, partnership agreement, and a mission that stays first.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7 FLAGS ================= -->
+<section id="flags">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-kicker">Module 3</div>
+      <h2>The 7 Warning Patterns You'll Learn to Catch</h2>
+      <p>A pattern seen early is a pattern avoided. A pattern rationalized is a pattern repeated.</p>
+    </div>
+    <div class="flags-grid">
+      <div class="flag-card"><h5>Gold Digger</h5><p>Oriented to your resources. Watch what she celebrates — and what her questions drift toward.</p></div>
+      <div class="flag-card"><h5>Controller</h5><p>Starts small, escalates. Every test you pass by giving in teaches her the next one works.</p></div>
+      <div class="flag-card"><h5>Drama Engine</h5><p>A storm follows her everywhere — and she needs you to rescue her from it.</p></div>
+      <div class="flag-card"><h5>Fixer-Upper</h5><p>You're her project, not her partner. The job is never done — and you're the fuel.</p></div>
+      <div class="flag-card"><h5>Love Bomber</h5><p>Perfect too fast. Future-faking compresses the timeline so you commit before the evidence.</p></div>
+      <div class="flag-card"><h5>Status Hunter</h5><p>Drawn to the image of you. Listen to whether her answers are about you — or your life.</p></div>
+      <div class="flag-card"><h5>Exit Plan</h5><p>She chose your trajectory, not you. When it stalls, so does she.</p></div>
+      <div class="flag-card"><h5>Your Filter</h5><p>One red flag is a warning. Two is a pattern. Three is a verdict. You'll learn to count.</p></div>
+    </div>
+    <p class="flag-note"><b>Rule of counting:</b> One red flag is a warning · Two is a pattern · Three is a verdict.</p>
+  </div>
+</section>
+
+<!-- ================= WHO / FORMAT ================= -->
+<section id="who">
+  <div class="container">
+    <div class="split">
+      <div>
+        <div class="sec-kicker">Who it's for</div>
+        <h2>Built for men who've already won — except at this</h2>
+        <p>The Filter is for successful, high-achieving men who are tired of:</p>
+        <ul class="for-list">
+          <li>Meeting women who want what you have instead of who you are</li>
+          <li>Discovering red flags at month six instead of date two</li>
+          <li>Wasting years, money, and peace on relationships that drain them</li>
+          <li>Guessing, when everything else in their life runs on systems</li>
+          <li>Being "the catch" that never catches the right one</li>
+        </ul>
+        <p style="margin-top:18px">If that's you, the fix isn't more attraction. It's filtration. And filtration is a skill — one we'll build together.</p>
+      </div>
+      <div>
+        <div class="format-card">
+          <h3>How the program works</h3>
+          <div class="fmt"><b>Duration</b><span>8 weeks, 1:1</span></div>
+          <div class="fmt"><b>Format</b><span>Weekly 60–90 min sessions</span></div>
+          <div class="fmt"><b>Between sessions</b><span>Structured homework & check-ins</span></div>
+          <div class="fmt"><b>Your tools</b><span>Worksheets, scorecards, scripts</span></div>
+          <div class="fmt"><b>Support</b><span>Direct access between calls</span></div>
+          <div class="fmt"><b>Outcome</b><span>Certainty in choosing</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-kicker">Results</div>
+      <h2>What clients say</h2>
+      <p>Placeholder — replace with your real client stories and results.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi">
+        <p class="quote">"I spent three years with a woman who was 'perfect' until she wasn't. The Filter showed me the pattern I'd been ignoring — in week one. I walked away clean, and six months later I met someone who actually builds with me."</p>
+        <p class="who">— Marcus, 38</p>
+        <p class="role">Founder, e-commerce</p>
+      </div>
+      <div class="testi">
+        <p class="quote">"The Standard of Five alone was worth the program. I finally stopped dating her potential and started dating her evidence. I've never been this calm about choosing."</p>
+        <p class="who">— Daniel, 42</p>
+        <p class="role">Managing Partner, law firm</p>
+      </div>
+      <div class="testi">
+        <p class="quote">"I thought I 'just knew' when someone was right. That's how I ended up engaged to the wrong woman. The Head-Heart-Gut framework saved me from a mistake that would've cost me everything."</p>
+        <p class="who">— James, 35</p>
+        <p class="role">Tech executive</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="pricing" id="enroll">
+  <div class="container">
+    <div class="price-card">
+      <div class="price-tag">The Filter · 1:1 Coaching</div>
+      <div class="price-amt">$2,500 <small>/ program</small></div>
+      <p style="color:var(--muted);margin-top:10px;font-size:14.5px">or 2 payments of $1,350 · 8 weekly sessions · one-on-one</p>
+      <ul class="price-list">
+        <li>8 x 60–90 minute private coaching sessions</li>
+        <li>All worksheets: Standard of Five, Vetting Checklist, Decision Sheet</li>
+        <li>Direct support between sessions</li>
+        <li>Your complete 90-day roadmap</li>
+      </ul>
+      <a href="#" class="btn btn-gold" style="display:inline-block">Apply for Coaching →</a>
+      <p class="guarantee">Free 20-minute strategy call first · If we're not a fit, we'll tell you — no sale, no pressure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-kicker">Questions</div>
+      <h2>Frequently asked</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Is this for me if I'm not currently dating anyone?</summary>
+        <div class="faq-body">Yes — arguably even better. Most clients start The Filter between relationships, so they're not learning the system while emotions are running hot. You'll be fully armed before the next woman walks in.</div>
+      </details>
+      <details>
+        <summary>What if I'm already seeing someone?</summary>
+        <div class="faq-body">Perfect timing. You'll run the Partnership Matrix and the Vetting System on your current situation. Clients either gain clarity to move forward with confidence — or the evidence they needed to leave early, instead of late.</div>
+      </details>
+      <details>
+        <summary>I don't have time to "date and vet."</summary>
+        <div class="faq-body">That's exactly why the program exists. You've spent years on wrong relationships that consumed all your time. This is 90 minutes a week for 8 weeks — and it ends the cycle that's been eating your time for years.</div>
+      </details>
+      <details>
+        <summary>Isn't this just a list of rules and red flags?</summary>
+        <div class="faq-body">No. Rules without self-worth become bitterness. The program starts with your standard — what you bring and what you'll accept — then installs a system. The red flags are just the part that saves you the most pain, the fastest.</div>
+      </details>
+      <details>
+        <summary>Will this work with my schedule?</summary>
+        <div class="faq-body">Sessions are scheduled around your calendar, and homework is designed for busy men — most clients complete it in under two hours a week.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta">
+  <div class="container">
+    <h2>The right woman isn't looking for an easy man.<br /><em>She's looking for a clear one.</em></h2>
+    <p>Book your free strategy call. We'll map where you are, what's been costing you, and whether The Filter is the right system for you.</p>
+    <a href="#" class="btn btn-gold">Apply for Your Free Strategy Call →</a>
+    <p style="margin-top:18px;font-size:13.5px;color:#8fa0b5">No pressure. If we're not a fit, we'll tell you.</p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p class="brand-name">The Filter</p>
+  <p>© 2025 The Filter Coaching · <a href="mailto:you@yourcoaching.com">you@yourcoaching.com</a> · Privacy · Terms</p>
+</footer>
+
+</body>
+</html>
